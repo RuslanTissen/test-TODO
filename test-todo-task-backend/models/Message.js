@@ -3,9 +3,9 @@ import mongoose from "mongoose"
 const { Schema, model } = mongoose
 
 const messageSchema = new Schema({
-	title: { type: String, required: true, trim: true },
-	content: { type: String, required: true, trim: true },
-	author: { type: Schema.Types.ObjectId, required: true, ref: "user" },
+	title:   { required: true, type: String, trim: true },
+	content: { required: true, type: String, trim: true },
+	author:  { required: true, type: Schema.Types.ObjectId, ref: "user" },
 }, {
 	timestamps: true
 })

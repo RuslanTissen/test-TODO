@@ -5,6 +5,7 @@ import { connect } from "./lib/database.js"
 import requestlogger from "./middleware/requestlogger.js"
 import messageRouter from "./routes/messageRouter.js"
 import userRouter from "./routes/userRouter.js"
+import checkAuth from "./middleware/checkAuth.js"
 
 // setup
 dotenv.config()
@@ -16,7 +17,7 @@ app.use(express.json())
 
 //endpoints
 app.use("/api/v1/users", userRouter)
-app.use("/api/v1/messages", messageRouter)
+app.use("/api/v1/messages", checkAuth, messageRouter)
 
 app.use((req, res, next) => next({ status: 404, message: "Resource not found" }))
 

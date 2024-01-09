@@ -3,7 +3,7 @@ POST http://localhost:3333/api/v1/users/register
 Content-Type: application/json
 
 {
-	"email": "rthyssen75@gmail.com",
+	"email": "rthyssen76@gmail.com",
 	"password": "1234567"
 }
 
@@ -16,3 +16,12 @@ Content-Type: application/json
 	"password": "1234567"
 }
 
+### Message Create 
+POST http://localhost:3333/api/v1/messages
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTljNGFiNzdhMTE5MDY2MmE4YmU0MTkiLCJpYXQiOjE3MDQ3NTI5MzR9.ow05b4VJftPqDDAY6mniD-0cSLP9Jwlh1RdSKCFNfHU
+
+{
+	"title": "Foo",
+	"content": "If we could lion understend"
+}
